@@ -38,6 +38,13 @@ SETUPTOOLS_VERSION="32.1.0"
 export WARNINGS_LOG=$(mktemp)
 export RECOMMENDED_PYTHON_VERSION=$DEFAULT_PYTHON_VERSION
 
+#################################################
+#################################################
+# Handle Pymssql install > 2.1.3 
+export PYMSSQL_BUILD_WITH_BUNDLED_FREETDS=1
+#################################################
+#################################################
+
 # Setup vendored tools and pip-pop (pip-diff)
 export PATH=$PATH:$ROOT_DIR/vendor/:$ROOT_DIR/vendor/pip-pop
 
